@@ -1,0 +1,265 @@
+:root{
+    --hp: red;
+    --attack: orange;
+    --defense: silver;
+    --speed: green;
+    --special-attack: yellow;
+    --special-defense: mediumturquoise;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+    height: 100%;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    font-family: Helvetica, arial, sans-serif;
+    background: #141414;
+}
+
+/*_____________________ Header _____________________*/
+
+header{
+    background: #141414;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+
+/*_____________________ Search Box _____________________*/
+
+header .container{
+    width: 60%;
+    background: #343534;
+    border-radius: 8px;
+    
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 15px;
+}
+
+header .container input{
+    font-size: 32px;
+    resize: none;
+    outline: none;
+    border: 0px solid transparent;
+    border-radius: 8px;
+    margin-right: 15px;
+    padding: 2px 5px;
+    text-align: center;
+    width: 80%;
+}
+
+header .container a{
+    color: #a8a8a8;
+    cursor: pointer;
+}
+
+header .container a:hover{
+    color: #a8a8a8c0;
+}
+
+a{
+    text-decoration: none;
+    font-size: 1.8em;
+}
+
+/*_____________________ Reset _____________________*/
+
+header .reset{
+    color: #a8a8a8;
+    font-size: 2.0em;
+    background-color: #343534;
+    padding: 15px;
+    border-radius: 8px;;
+    cursor: pointer;
+}
+
+header .reset:hover{
+    background-color: #434443;
+}
+
+/*_____________________ myTeam _____________________*/
+
+header .myTeam{
+    color: #a8a8a8;
+    padding: 15px 40px;
+    background-color: #343534;
+    font-size: 1.2em;
+    border-radius: 8px;;
+    cursor: pointer;
+}
+
+header .myTeam:hover{
+    background-color: #434443;
+}
+
+/*_____________________ Main _____________________*/
+
+main{
+    background: #141414;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+/*_____________________ Pokemon _____________________*/
+
+main .container{
+    width: 100% ;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    background: #141414;
+    box-sizing: content-box;
+}
+
+@keyframes zoomcards {
+    from{transform: scale(0);}
+    to{transform: scale(1);}
+}
+
+main .container .pokemon{
+    width: 250px;
+    height: 500px;
+    border: 0px solid transparent;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 15px;
+    animation: zoomcards;
+    animation-duration: 0.2s;
+}
+
+main .container .pokemon img{
+    width: 80%;
+}
+
+.types{
+    display: flex;
+    justify-content: space-around;
+    width: 50%;
+    margin: 15px;
+}
+
+.stats{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.stats div{
+    width: 80%;
+    background-color: #a8a8a8;
+    border-radius: 16px;
+    margin: 2px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.about{
+    margin: 15px;
+}
+
+.container .pokemon .id{
+    margin-left: 75%;
+    margin-top: 5px;
+}
+
+
+/*_____________________ Types _____________________*/
+
+.normal     {color: #A8A878;}
+.fire       {color: #F08030;}
+.water      {color: #6890F0;}
+.grass      {color: #78C850;}
+.electric    {color: #F8D030;}
+.ice        {color: #98D8D8;}
+.fighting   {color: #C03028;}
+.poison     {color: #A040A0;}
+.ground     {color: #E0C068;}
+.flying     {color: #A890F0;}
+.psychic    {color: #F85888;}
+.bug        {color: #A8B820;}
+.rock       {color: #B8A038;}
+.ghost      {color: #705898;}
+.dark       {color: #705848;}
+.dragon     {color: #7038F8;}
+.steel      {color: #B8B8D0;}
+.fairy      {color: #F0B6BC;}
+
+.normal-bg     {background-color: #a8a8787e;}
+.fire-bg       {background-color: #F080307e;}
+.water-bg      {background-color: #6890F07e;}
+.grass-bg      {background-color: #78C8507e;}
+.electric-bg   {background-color: #F8D0307e;}
+.ice-bg        {background-color: #98D8D87e;}
+.fighting-bg   {background-color: #C030287e;}
+.poison-bg     {background-color: #A040A07e;}
+.ground-bg     {background-color: #E0C0687e;}
+.flying-bg     {background-color: #A890F07e;}
+.psychic-bg    {background-color: #F858887e;}
+.bug-bg        {background-color: #A8B8207e;}
+.rock-bg       {background-color: #B8A0387e;}
+.ghost-bg      {background-color: #7058987e;}
+.dark-bg       {background-color: #7058487e;}
+.dragon-bg     {background-color: #7038F87e;}
+.steel-bg      {background-color: #B8B8D07e;}
+.fairy-bg      {background-color: #F0B6BC7e;}
+
+/*_____________________ Error/PlaceHolder _____________________*/
+
+.placeholder-container{
+    width: 80%;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    background-color: whitesmoke;
+    font-weight: bold;
+    font-size: 2.0em;
+    border: 0px solid transparent;
+    border-radius: 16px;
+    animation: zoomcards 0.2s;
+}
+
+.placeholder-container p{
+    margin-top: 15px;
+}
+
+/*_____________________ Responsive _____________________*/
+
+@media screen and (max-width: 425px) {
+    header{
+        flex-direction: column;
+    }
+
+    header .container,header .myTeam,header .reset{
+        width: 90%;
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    main .container .pokemon{
+        width: 90%;
+        height: 570px;
+    }
+
+}
